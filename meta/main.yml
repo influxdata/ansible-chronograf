@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  author: 'Paul Myjavec'
+  description: 'Chronograf for Linux'
+  company: "InfluxData"
+  license: "license (MIT)"
+  min_ansible_version: '2.3.2'
+  platforms:
+    - name: 'Ubuntu'
+      versions:
+        - 'all'
+    - name: 'Debian'
+      versions:
+        - 'all'
+  categories:
+    - 'system'
+
+dependencies: []

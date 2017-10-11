@@ -1,0 +1,7 @@
+---
+chronograf_version: '1.3.9.0'
+chronograf_pkg_base_url: 'https://dl.influxdata.com/chronograf/releases'
+chronograf_deb_pkg: "chronograf_{{ chronograf_version}}_amd64.deb"
+chronograf_use_repo: false
+chronograf_service_state: 'started'
+chronograf_service_enabled: 'yes'

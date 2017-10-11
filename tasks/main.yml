@@ -1,0 +1,17 @@
+---
+- name: "{{ ansible_os_family }} : Install Chronograf"
+  apt:
+      deb: "{{ chronograf_pkg_base_url }}/{{ chronograf_deb_pkg }}"
+      state: 'present'
+  when:
+    - ansible_os_family == 'Debian'
+    - not chronograf_use_repo
+  tags: ['chronograf-install']
+
+
+- name: 'Manage Chronograf service'
+  service:
+    name: 'chronograf'
+    state: "{{ chronograf_service_state }}"
+    enabled: "{{ chronograf_service_enabled }}"
+  tags: ['chronograf-service']
