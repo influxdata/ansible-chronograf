@@ -1,13 +1,17 @@
 # Chronograf Ansible for Linux
 
-Installs and manages Chronograf on Linux hosts.
+This Ansible role installs and manages the Chronograf service on Linux hosts.
+
+Tested against modern Debian based distributions and Enterprise Linux 6 and 7.
 
 _Note: Still under active development_
 
 ## Usage
 
+Standard usage:
+
 ```
-- hosts: 'chronograf'
+- hosts: 'webservers'
   roles:
     - 'ansible-chronograf'
 ```
