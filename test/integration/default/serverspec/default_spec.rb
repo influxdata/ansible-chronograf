@@ -8,6 +8,6 @@ describe file('/etc/default/chronograf') do
 end
 
 describe service('chronograf') do
-  it { should be_running.under('systemd') }
+  it { should be_running }
   it { should be_enabled }
 end
