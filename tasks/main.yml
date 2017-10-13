@@ -1,2 +1,3 @@
 ---
-- include: "{{ ansible_os_family | lower }}.yml"
+- include: "install-{{ ansible_os_family | lower }}.yml"
+- include: "service.yml"

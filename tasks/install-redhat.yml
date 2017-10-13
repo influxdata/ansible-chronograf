@@ -1,0 +1,20 @@
+---
+- name: 'Enterprise Linux - Add InfluxData repository file'
+  template:
+    src: 'influxdata.repo.j2'
+    dest: '/etc/yum.repos.d/influxdata.repo'
+    force: 'yes'
+    backup: 'yes'
+  when: chronograf_use_repo
+
+- name: 'Enterprise Linux - Install Chronograf'
+  yum:
+    name: 'chronograf'
+    state: 'latest'
+  when: chronograf_use_repo
+
+- name: 'Enterprise Linux - Install Chrongraf via URL'
+  yum:
+    name: "{{ chronograf_rpm_pkg_url }}"
+    state: 'present'
+  when: not chronograf_use_repo

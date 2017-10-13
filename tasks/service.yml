@@ -1,0 +1,7 @@
+---
+- name: 'Manage Chronograf service'
+  service:
+    name: 'chronograf'
+    state: "{{ chronograf_service_state }}"
+    enabled: "{{ chronograf_service_enabled }}"
+  tags: 'chronograf-service'

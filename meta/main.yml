@@ -12,6 +12,10 @@ galaxy_info:
     - name: 'Debian'
       versions:
         - 'all'
+    - name: 'RedHat'
+      versions:
+        - 6
+        - 7
   categories:
     - 'system'
 

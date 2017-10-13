@@ -1,7 +1,7 @@
 ---
 - name: 'Debian - Install Chronograf via URL'
   apt:
-      deb: "{{ chronograf_pkg_url }}"
+      deb: "{{ chronograf_deb_pkg_url }}"
       state: 'present'
   when: not chronograf_use_repo
   tags: 'chronograf-install'
@@ -27,10 +27,3 @@
   apt:
     name: 'chronograf'
   when: chronograf_use_repo
-
-- name: 'Debian - Manage Chronograf service'
-  service:
-    name: 'chronograf'
-    state: "{{ chronograf_service_state }}"
-    enabled: "{{ chronograf_service_enabled }}"
-  tags: 'chronograf-service'
