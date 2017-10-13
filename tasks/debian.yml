@@ -1,0 +1,36 @@
+---
+- name: 'Debian - Install Chronograf via URL'
+  apt:
+      deb: "{{ chronograf_pkg_url }}"
+      state: 'present'
+  when: not chronograf_use_repo
+  tags: 'chronograf-install'
+
+- name: 'Debian - Install apt-transport-https allows https apt downloads'
+  apt:
+    name: 'apt-transport-https'
+    state: 'present'
+  when: chronograf_use_repo
+
+- name: 'Debian - Import InfluxData GPG signing key'
+  apt_key:
+    url: 'https://repos.influxdata.com/influxdb.key'
+    state: 'present'
+  when: chronograf_use_repo
+
+- name: 'Debian - Manage InfluxData repository'
+  apt_repository:
+    repo: "{{ chronograf_apt_repo_url }}"
+    state: "{{ 'present' if chronograf_use_repo else 'absent' }}"
+
+- name: 'Debian - Install Chronograf from apt repository'
+  apt:
+    name: 'chronograf'
+  when: chronograf_use_repo
+
+- name: 'Debian - Manage Chronograf service'
+  service:
+    name: 'chronograf'
+    state: "{{ chronograf_service_state }}"
+    enabled: "{{ chronograf_service_enabled }}"
+  tags: 'chronograf-service'
