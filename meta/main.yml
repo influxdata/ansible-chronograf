@@ -18,5 +18,8 @@ galaxy_info:
         - 7
   categories:
     - 'system'
+    - 'monitoring'
+    - 'influxdb'
+    - 'analytics'
 
 dependencies: []
