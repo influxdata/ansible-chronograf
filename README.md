@@ -1,6 +1,6 @@
 # Chronograf Ansible for Linux
 
-Ansible role for automating the installation and configuration of the Chronograf service on Linux hosts.
+Ansible role from the InfluxData team for automating the installation and configuration of the Chronograf service on Linux hosts.
 
 Tested against modern Debian based distributions and Enterprise Linux 6 and 7.
 
