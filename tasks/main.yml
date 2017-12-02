@@ -1,3 +1,5 @@
 ---
 - include: "install-{{ ansible_os_family | lower }}.yml"
+  tags:
+    - 'chronograf'
 - include: "service.yml"
