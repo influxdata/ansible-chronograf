@@ -11,7 +11,7 @@ Standard usage:
 ```
 - hosts: 'webservers'
   roles:
-    - 'ansible-chronograf'
+    - 'influxdata.chronograf'
 ```
 
 ## Tests
