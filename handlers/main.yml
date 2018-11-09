@@ -1,0 +1,4 @@
+---
+- name: restart chronograf
+  service: name=chronograf state=restarted
+  when: chronograf_service_state == 'started'

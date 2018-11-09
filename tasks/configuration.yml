@@ -1,0 +1,6 @@
+---
+- name: change default configuration
+  template:
+    src: default.j2
+    dest: /etc/default/chronograf
+  notify: restart chronograf

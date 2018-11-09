@@ -5,3 +5,4 @@ chronograf_use_repo: true
 chronograf_service_state: 'started'
 chronograf_service_enabled: 'yes'
 chronograf_apt_repo_url: "deb https://repos.influxdata.com/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} stable"
+chronograf_default_options: []

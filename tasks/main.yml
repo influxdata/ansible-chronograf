@@ -3,3 +3,4 @@
   tags:
     - 'chronograf'
 - include: "service.yml"
+- include: "configuration.yml"
