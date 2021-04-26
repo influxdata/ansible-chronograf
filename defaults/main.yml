@@ -1,5 +1,5 @@
 ---
-chronograf_ver: '1.8.0'
+chronograf_ver: '1.8.10'
 chronograf_use_repo: true
 chronograf_deb_pkg_url: 'https://dl.influxdata.com/chronograf/releases/chronograf_{{ chronograf_ver }}_amd64.deb'
 chronograf_rpm_pkg_url: 'https://dl.influxdata.com/chronograf/releases/chronograf-{{ chronograf_ver }}.x86_64.rpm'
